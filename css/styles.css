@@ -19,11 +19,6 @@
   }
   
   
-  .bg-image {
-    background-image: url('bg@1x.jpg');
-    background-size: cover;
-    background-position: center;
-  }
   
   @media (min-resolution: 192dpi) {
     .bg-image {
