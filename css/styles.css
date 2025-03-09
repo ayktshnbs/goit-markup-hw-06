@@ -13,13 +13,6 @@
   }
   
 
-  img {
-    max-width: 100%;
-    height: auto;
-  }
-  
-  
-  
   @media (min-resolution: 192dpi) {
     .bg-image {
       background-image: url('bg@2x.jpg');
