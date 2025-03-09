@@ -5,13 +5,39 @@
   }
 
 
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+  
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  
+  .bg-image {
+    background-image: url('bg@1x.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+  
+  @media (min-resolution: 192dpi) {
+    .bg-image {
+      background-image: url('bg@2x.jpg');
+    }
+  }
+  
+
   @media (min-width: 768px) {
     body {
       background-color: #eaeaea;
     }
   }
   
-
   @media (min-width: 1158px) {
     body {
       background-color: #dcdcdc;
@@ -24,7 +50,6 @@
       margin: 0 auto;
     }
   }
-  
 *
 {
     box-sizing: border-box;
