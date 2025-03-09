@@ -1,3 +1,30 @@
+@media (min-width: 320px) {
+    html, body {
+      overflow-x: hidden;
+    }
+  }
+
+
+  @media (min-width: 768px) {
+    body {
+      background-color: #eaeaea;
+    }
+  }
+  
+
+  @media (min-width: 1158px) {
+    body {
+      background-color: #dcdcdc;
+    }
+  }
+  
+  @media (min-width: 768px) and (max-width: 1158px) {
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+  }
+  
 *
 {
     box-sizing: border-box;
