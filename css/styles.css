@@ -13,13 +13,6 @@
   }
   
 
-  @media (min-resolution: 192dpi) {
-    .bg-image {
-      background-image: url('bg@2x.jpg');
-    }
-  }
-  
-
   @media (min-width: 768px) {
     body {
       background-color: #eaeaea;
