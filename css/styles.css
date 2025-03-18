@@ -56,7 +56,7 @@
     padding-right: 32px;
     background-color: transparent;
 }
-.mobile-menu-container{
+.mobile-menu-container{ /*later */
 }
 .mobile-button{
     display: flex;
@@ -709,9 +709,11 @@ ul, ol {
 
 /*Tablet*/
 @media screen and (min-width: 768px) {
-    *
-{
     
+    * 
+    body 
+{
+    background-color: #2E2F42;
 }
 }
 /*Desktop*/
