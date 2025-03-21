@@ -17,6 +17,61 @@
     href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet" />
 
+    <script>
+       document.addEventListener("DOMContentLoaded", function () {
+    const openMenuBtn = document.querySelector(".mobile-menu-svg"); 
+    const closeMenuBtn = document.querySelector(".mobile-btn-close"); 
+    const mobileMenu = document.querySelector(".mobile-menu-container");    
+
+    
+    mobileMenu.style.display = "none";
+
+    
+    openMenuBtn.addEventListener("click", function () {
+      mobileMenu.style.display = "block"; 
+    });
+
+    
+    closeMenuBtn.addEventListener("click", function () {
+      mobileMenu.style.display = "none"; 
+    });
+
+    
+    window.addEventListener("click", function (event) {
+      if (!mobileMenu.contains(event.target) && !openMenuBtn.contains(event.target)) {
+        mobileMenu.style.display = "none";
+      }
+    });
+  });
+
+
+  document.addEventListener("DOMContentLoaded", function () {
+ 
+  const modal = document.querySelector(".modal");
+  const orderButton = document.querySelector(".order_button");
+  const closeButton = document.querySelector(".close");
+  const overlay = document.querySelector(".overlay");
+
+
+  modal.style.display = "none";
+
+  
+  orderButton.addEventListener("click", function () {
+    modal.style.display = "block";
+  });
+
+ 
+  closeButton.addEventListener("click", function () {
+    modal.style.display = "none";
+  });
+
+  overlay.addEventListener("click", function () {
+    modal.style.display = "none";
+  });
+});
+
+    </script>
+
   <title>WebStudio</title>
 </head>
 
@@ -37,6 +92,7 @@
           </li>
         </ul>
       </nav>
+  
       <address class="contact_info">
         <ul class="contact">
           <li>
@@ -46,69 +102,76 @@
             <a href="tel:+110001111111" class="contact_list">+11 (000) 111-11-11</a>
           </li>
         </ul>
-        <br />
       </address>
-      <button type ="mobile-menu-open">
+  
+      <button type="mobile-menu-open">
         <svg class="mobile-menu-svg" height="48" width="48">
           <use href="./images/icons.svg#icon-hamburger"></use>
         </svg>
-       <!-- <div class="mobile-menu-container">
-                        <div class="mobile-button">
-                            <button type="button" class="mobile-btn-close">
-                                <svg class="mobile-svg-close" width="8" height="8">
-                                    <use href="./images/icons.svg#icon-close"></use>
-                                </svg>
-                            </button>
-                        </div>
-                        <div class="mobile-menu">
-                            <ul class="mobile-menu-list">
-                                <li class="mobile-menu-list-item"><a href="">Studio</a></li>
-                                <li class="mobile-menu-list-item"><a href="">Portfolio</a></li>
-                                <li class="mobile-menu-list-item"><a href="">Contacts</a></li>
-                            </ul>
-                        </div>
-                        <div class="mobile-address">
-                                <ul class="mobile-contact">
-                                    <li>
-                                        <a href="mailto:info@devstudio.com" class="mobile-contact-list-link">info@devstudio.com</a>
-                                    </li>
-                                    <li>
-                                        <a href="tel:+110001111111" class="mobile-contact-list-link">+11 (000) 111-11-11</a>
-                                    </li>
-                                </ul>
-                                <ul class="mobile-social-list">
-                                    <li class="mobile-social-list-item">
-                                        <a href="#" class="mobile-social-link">
-                                            <svg width="16" height="16" class="social-svg">
-                                                <use href="./images/icons.svg#icon-instagram-2"></use>
-                                            </svg>
-                                        </a>
-                                    </li>
-                                    <li class="mobile-social-list-item">
-                                        <a href="#" class="mobile-social-link">
-                                        <svg width="16" height="16" class="social-svg">
-                                            <use href="./images/icons.svg#icon-twitter-1"></use>
-                                        </svg>
-                                    </a>
-                                    </li>
-                                    <li class="mobile-social-list-item">
-                                        <a href="#" class="mobile-social-link">
-                                            <svg width="16" height="16" class="social-svg">
-                                                <use href="./images/icons.svg#icon-Vector"></use>
-                                            </svg>
-                                        </a>
-                                    </li>
-                                    <li class="mobile-social-list-item">
-                                        <a href="#" class="mobile-social-link">
-                                            <svg width="16" height="16" class="social-svg">
-                                                <use href="./images/icons.svg#icon-linkedin-1"></use>
-                                            </svg>
-                                        </a>
-                                    </li>
-                                </ul> -->
+      </button>
+  
+      <div class="mobile-menu-container">
+        <div class="mobile-button">
+          <button type="button" class="mobile-btn-close">
+            <svg class="close-menu" width="24" height="24">
+              <use href="./images/icons.svg#icon-close"></use>
+            </svg>
+          </button>
+        </div>
+  
+        <div class="mobile-menu">
+          <ul class="mobile-menu-list">
+            <li class="mobile-menu-list-item"><a href="">Studio</a></li>
+            <li class="mobile-menu-list-item"><a href="">Portfolio</a></li>
+            <li class="mobile-menu-list-item"><a href="">Contacts</a></li>
+          </ul>
+        </div>
+  
+        <div class="mobile-address">
+          <ul class="mobile-contact">
+            <li>
+              <a href="mailto:info@devstudio.com" class="mobile-contact-list-link">info@devstudio.com</a>
+            </li>
+            <li>
+              <a href="tel:+110001111111" class="mobile-contact-list-link">+11 (000) 111-11-11</a>
+            </li>
+          </ul>
+  
+          <ul class="mobile-social-list">
+            <li class="mobile-social-list-item">
+              <a href="#" class="mobile-social-link">
+                <svg width="40" height="40" class="social-svg">
+                  <use href="./images/icons.svg#icon-instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="mobile-social-list-item">
+              <a href="#" class="mobile-social-link">
+                <svg width="16" height="16" class="social-svg">
+                  <use href="./images/icons.svg#icon-twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="mobile-social-list-item">
+              <a href="#" class="mobile-social-link">
+                <svg width="40" height="40" class="social-svg">
+                  <use href="./images/icons.svg#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="mobile-social-list-item">
+              <a href="#" class="mobile-social-link">
+                <svg width="16" height="16" class="social-svg">
+                  <use href="./images/icons.svg#icon-linkedIn"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </header>
+  
 
 
   <main>
@@ -568,42 +631,5 @@
       </div>
     </form>
   </div>
-
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
- const modal = document.querySelector(".modal");
- const openModalBtn = document.querySelector(".order_button");
- const closeModalBtn = document.querySelector(".close");
-
- modal.style.display = "none";
- openModalBtn.addEventListener("click", function () {
-     modal.style.display = "block";
- });
- closePopupBtn.addEventListener("click", function () {
-     popup.style.display = "none";
- });
- window.addEventListener("click", function (event) {
-     if (event.target === popup) {
-         popup.style.display = "none";
-     }
- });
-});
-
-
- document.addEventListener("DOMContentLoaded", function () {
-     const mobileMenu = document.querySelector(".mobile-menu-con");
-     const openMobileBtn = document.querySelector(".mobile-menu-svg");
-     const closeMobileBtn = document.querySelector(".mobile-close");
-     
-     mobileMenu.style.display = "none";
-     openMobileBtn.addEventListener("click", function () {
-         mobileMenu.style.display = "flex";
-     });
-     closeMobileBtn.addEventListener("click", function () {
-         mobileMenu.style.display = "none";
-     });
- });
- </script>
-
 </body>
 </html>
