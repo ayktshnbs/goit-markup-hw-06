@@ -1,7 +1,11 @@
 /*mobile */ 
 @media screen and (max-width: 767px) {
     
-    
+    .container{
+        width: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
     .menu, .contact_info {
         display: none;
     }
@@ -48,8 +52,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 24px;
-    height: 24px;
+    width: 40px;
+    height: 40px;
     top: 16px;
     padding-top: 48px;
     padding-right: 32px;
@@ -78,16 +82,21 @@
     border-radius: 50%;
     background-color: transparent;
     border: 1px solid rgba(46, 47, 66, 1);
-    width: 24px;
-    height: 24px;
+    width: 40px;
+    height: 40px;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
   }
+  .mobile-address{
+    display: flex;
+    flex-direction: column;
+    margin-top: 100%;
+  }
 .mobile-btn-close svg {
-    width: 12px; 
-    height: 12px;
+    width: 40px; 
+    height: 40px;
     fill: rgba(46, 47, 66, 1); 
   }
 .mobile-menu-list{
@@ -130,8 +139,8 @@
     margin-top: 40px;
 }
 .mobile-social-list svg{
-    width: 16px;
-    height: 16px;
+    width: 40px;
+    height: 40px;
 }
 .mobile-social-link {
     width: 40px;
@@ -718,6 +727,8 @@ ul, ol {
     .container {
         width: 768px;
         padding: 0 12px;
+        margin-left: auto;
+        margin-right: auto;
     }
     
     
